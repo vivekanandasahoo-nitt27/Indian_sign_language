@@ -216,3 +216,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+indian_sign_landmarks/
+indian_sign_language/
+indian_sign_language_merged/
+indian_sign_merged_test/
+
+indian_sign_test/
+aug_indian_dataset/

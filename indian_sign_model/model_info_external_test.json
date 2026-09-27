@@ -1,0 +1,33 @@
+{
+    "tensorflow_version": "2.10.1",
+    "gpu_detected": true,
+    "gpu": "PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')",
+    "number_of_classes": 229,
+    "number_of_features": 135,
+    "total_augmented_samples": 138000,
+    "training_samples": 117300,
+    "validation_samples": 20700,
+    "external_test_images": 1949,
+    "external_test_classes": 194,
+    "architecture": [
+        135,
+        352,
+        256,
+        128,
+        64,
+        229
+    ],
+    "dropout_rates": [
+        0.2,
+        0.15,
+        0.1,
+        0.1
+    ],
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "maximum_epochs": 100,
+    "total_parameters": 197221,
+    "external_test_loss": 0.34373751282691956,
+    "external_test_accuracy": 0.9374037981033325
+}

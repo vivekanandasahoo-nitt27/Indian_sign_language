@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Sign Language Translator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <h1>Indian Sign Language Translator</h1>
+        <p>229-class live landmark-based sign recognition</p>
+    </header>
+
+    <main class="grid">
+        <section class="card">
+            <div class="card-title">
+                <span>Live Camera</span>
+                <span id="cameraStatus" class="status offline">OFFLINE</span>
+            </div>
+
+            <div class="video-wrapper">
+                <video id="video" autoplay playsinline muted></video>
+                <canvas id="canvas" hidden></canvas>
+            </div>
+
+            <div class="controls">
+                <button id="startBtn">Start Camera</button>
+                <button id="stopBtn" disabled>Stop</button>
+            </div>
+
+            <div class="technical">
+                <div><span>Sampling</span><strong>20 / 3 sec</strong></div>
+                <div><span>Confirmation</span><strong>5 frames</strong></div>
+                <div><span>Threshold</span><strong>70%</strong></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="card-title">
+                <span>Current Sign</span>
+                <span id="confidence">0%</span>
+            </div>
+
+            <div id="currentSign" class="current-sign">—</div>
+
+            <div class="prediction-info">
+                <div><span>Raw prediction</span><strong id="rawPrediction">Waiting...</strong></div>
+                <div><span>Confirmation</span><strong id="confirmation">0 / 5</strong></div>
+                <div><span>Inference</span><strong id="inference">—</strong></div>
+            </div>
+
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+        </section>
+    </main>
+
+    <section class="card sentence-card">
+        <div class="card-title">
+            <span>Translated Sentence</span>
+            <span class="history-label">Rolling 20 seconds</span>
+        </div>
+
+        <div id="sentence" class="sentence">
+            Start the camera and perform a sign...
+        </div>
+
+        <div id="history" class="history"></div>
+
+        <button id="resetBtn" class="reset">Clear Sentence</button>
+    </section>
+
+    <footer>
+        <span id="featureStatus">System ready</span>
+        <span>•</span>
+        <span>MediaPipe + TensorFlow + Flask</span>
+    </footer>
+</div>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
