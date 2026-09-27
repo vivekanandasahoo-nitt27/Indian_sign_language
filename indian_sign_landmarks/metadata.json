@@ -1,0 +1,27 @@
+{
+  "dataset": "D:\\aug_indian_dataset",
+  "classes": 229,
+  "samples": 138000,
+  "features": 135,
+  "hand_features": 126,
+  "shoulder_features": 6,
+  "presence_features": 3,
+  "hand_detection_min_confidence": 0.5,
+  "pose_detection_min_confidence": 0.2,
+  "pose_visibility_threshold": 0.2,
+  "default_left_shoulder": [
+    0.693719744682312,
+    0.3644018769264221,
+    -0.13180971145629883
+  ],
+  "default_right_shoulder": [
+    0.3198448419570923,
+    0.3701897859573364,
+    -0.17071516811847687
+  ],
+  "hand_detected": 133884,
+  "both_hands": 67557,
+  "pose_detected": 126829,
+  "default_shoulder_used": 11171,
+  "failed": 0
+}
